@@ -39,10 +39,10 @@
             </thead>
             <tbody>
                 {% if cve_list %}
-                    {% for cve_id, description in cve_list.items() %}
+                    {% for item in cve_list %}
                     <tr>
-                        <td>{{ cve_id }}</td>
-                        <td>{{ description }}</td>
+                        <td>{{ item[0] }}</td>
+                        <td>{{ item[1] }}</td>
                     </tr>
                     {% endfor %}
                 {% else %}
